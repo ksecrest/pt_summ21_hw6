@@ -3,6 +3,8 @@ import { Route, Switch } from "react-router-dom";
 import { Home } from "./Components/Home";
 import { NoMatch } from "./Components/NoMatch";
 import { NavBar } from "./Components/NavBar";
+import { Theaters } from "./TheaterPages/Theaters";
+import { Theater } from "./TheaterPages/Theater";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/theaters" component={Theaters} />
+        <Route exact path="/theater/:id" component={Theater} />
         <Route component={NoMatch} />
       </Switch>
     </>

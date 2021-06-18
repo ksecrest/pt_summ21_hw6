@@ -1,5 +1,5 @@
 class Api::TheatersController < ApplicationController
-  beffore_action :set_theater, only: [:show, :update, :destroy]
+  before_action :set_theater, only: [:show, :update, :destroy]
 
   def index
     render json: Theater.all
