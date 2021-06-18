@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 export const Theaters = () => {
   const [theaters, setTheaters] = useState([]);
+
   const getTheaters = async () => {
     try {
       let res = await Axios.get("/api/theaters");
@@ -25,10 +26,13 @@ export const Theaters = () => {
       </>
     ));
   };
+
   return (
     <>
-      {renderTheaters()}
       <h1>Theaters</h1>
+      <a href="/addtheater">Add a Theater</a>
+      <br />
+      {renderTheaters()}
     </>
   );
 };

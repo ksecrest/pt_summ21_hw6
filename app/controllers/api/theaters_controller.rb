@@ -33,7 +33,7 @@ class Api::TheatersController < ApplicationController
 
   private
   def theater_params
-    params.require(:theater).permit(:name)
+    params.permit(:name)
   end
 
   def set_theater
